@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="module_get_module_path_tree_view" model="ir.ui.view">
+        <field name="name">module.get.module.path.tree.inherit</field>
+        <field name="model">ir.module.module</field>
+        <field name="inherit_id" ref="base.module_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='shortdesc']" position="after">
+                <field name="folder_name"/>
+            </xpath>
+        </field>
+    </record>
+
+
+    <!-- Module Category Form View 
+    <record id="module_get_module_path_category_form" model="ir.ui.view">
+        <field name="name">module.get.module.path.category.form</field>
+        <field name="model">ir.module.category</field>
+        <field name="inherit_id" ref="base.view_module_category_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='sequence']" position="after">
+                <field name="folder_name"/>
+            </xpath>
+        </field>
+    </record>-->
+</odoo>
